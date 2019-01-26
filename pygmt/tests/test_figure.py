@@ -114,5 +114,5 @@ def test_figure_show():
     # Check if the external viewer is triggered using monkeypatching
     fig = Figure()
     fig.basemap(region="10/70/-300/800", projection="X3i/5i", frame="af")
-    res = fig.show()
-    assert res is fig
+    fig.show()
+    assert False

@@ -40,6 +40,13 @@ Saving and displaying the figure:
     Figure.show
     Figure.psconvert
 
+Utilities for working in Jupyter notebooks:
+
+.. autosummary::
+    :toctree: generated
+
+    enable_notebook
+
 
 Data Processing
 ---------------
