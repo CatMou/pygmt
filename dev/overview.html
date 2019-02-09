@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     
-        <title>Python Module Index &mdash; PyGMT</title>
+        <title>Overview &mdash; PyGMT</title>
     
 
 
@@ -35,9 +35,8 @@
   <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
- 
-
-
+    <link rel="next" title="Installing" href="install.html" />
+    <link rel="prev" title="Disclaimer" href="index.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -86,8 +85,12 @@
             
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#presentations">Presentations</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gallery/index.html">Gallery</a></li>
@@ -168,10 +171,15 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Python Module Index</li>
+      <li>Overview</li>
     
     
     <li class="source-link">
+        
+            
+                <a href="https://github.com/GenericMappingTools/pygmt/edit/master/doc/overview.rst"
+                   class="fa fa-github"> Improve this page</a>
+            
         
         
     </li>
@@ -184,45 +192,117 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
 
-   <h1>Python Module Index</h1>
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
 
-   <div class="modindex-jumpbox">
-   <a href="#cap-p"><strong>p</strong></a>
-   </div>
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
 
-   <table class="indextable modindextable">
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-p"><td></td><td>
-       <strong>p</strong></td><td></td></tr>
-     <tr>
-       <td><img src="_static/minus.png" class="toggler"
-              id="toggle-1" style="display: none" alt="-" /></td>
-       <td>
-       <a href="api/index.html#module-pygmt"><code class="xref">pygmt</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/index.html#module-pygmt.clib"><code class="xref">pygmt.clib</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/index.html#module-pygmt.datasets"><code class="xref">pygmt.datasets</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/index.html#module-pygmt.exceptions"><code class="xref">pygmt.exceptions</code></a></td><td>
-       <em></em></td></tr>
-   </table>
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>PyGMT is a Python wrapper for the
+<a class="reference external" href="https://github.com/GenericMappingTools/gmt">Generic Mapping Tools (GMT)</a>, a
+command-line program widely used in the Earth Sciences.
+It provides capabilities for processing spatial data (gridding, filtering, masking,
+FFTs, etc) and making high quality plots and maps.</p>
+<p>PyGMT is different from Python libraries like
+<a class="reference external" href="https://bokeh.pydata.org/en/latest/">Bokeh</a>
+and <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, which have a larger focus on interactivity
+and allowing different backends.
+GMT uses the <a class="reference external" href="https://en.wikipedia.org/wiki/PostScript">PostScript</a> format to
+generate high quality (static) vector graphics for publications, posters, talks, etc.
+It is memory efficient and very fast.
+The PostScript figures can be converted to other formats like PDF, PNG, and JPG for use
+on the web and elsewhere.
+In fact, PyGMT users will usually not have any contact with the original PostScript
+files and get only the more convenient formats like PDF and PNG.</p>
+<p>The project was started in 2017 by <a class="reference external" href="http://www.leouieda.com">Leonardo Uieda</a>
+and <a class="reference external" href="http://www.soest.hawaii.edu/wessel">Paul Wessel</a> (the co-creator and main
+developer of GMT) at the University of Hawaii at Manoa.
+The development of PyGMT was funded by
+<a class="reference external" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1558403">NSF grant OCE-1558403</a>.</p>
+</div>
+<div class="section" id="presentations">
+<h2>Presentations<a class="headerlink" href="#presentations" title="Permalink to this headline">¶</a></h2>
+<p>These are conference presentations about the development of PyGMT (previously
+“GMT/Python”):</p>
+<ul class="simple">
+<li>“Building an object-oriented Python interface for the Generic Mapping Tools”.
+2018.
+Leonardo Uieda and Paul Wessel.
+Presented at <em>Scipy 2018</em>.
+doi:<a class="reference external" href="https://doi.org/10.6084/m9.figshare.6814052">10.6084/m9.figshare.6814052</a></li>
+</ul>
+<div class="figure align-center">
+<a class="reference external image-reference" href="https://www.youtube.com/watch?v=6wMtfZXfTRM"><img alt="Scipy youtube video" src="_images/scipy2018-youtube-thumbnail.png" /></a>
+</div>
+<ul class="simple">
+<li>“Integrating the Generic Mapping Tools with the Scientific Python Ecosystem”.
+2018.
+Leonardo Uieda and Paul Wessel.
+Presented at <em>AOGS Annual Meeting 2018</em>.
+doi:<a class="reference external" href="https://doi.org/10.6084/m9.figshare.6399944">10.6084/m9.figshare.6399944</a></li>
+</ul>
+<div class="figure align-center">
+<a class="reference external image-reference" href="https://doi.org/10.6084/m9.figshare.6399944"><img alt="AOGS poster on figshare" src="_images/aogs2018-poster.jpg" /></a>
+</div>
+<ul class="simple">
+<li>“Bringing the Generic Mapping Tools to Python”.
+2017.
+Leonardo Uieda and Paul Wessel.
+Presented at <em>Scipy 2017</em>.
+doi:<a class="reference external" href="https://doi.org/10.6084/m9.figshare.7635833">10.6084/m9.figshare.7635833</a></li>
+</ul>
+<div class="figure align-center">
+<a class="reference external image-reference" href="https://www.youtube.com/watch?v=93M4How7R24"><img alt="Scipy youtube video" src="_images/scipy2017-youtube-thumbnail.png" /></a>
+</div>
+<ul class="simple">
+<li>“A modern Python interface for the Generic Mapping Tools”.
+2017.
+Leonardo Uieda and Paul Wessel.
+Presented at <em>AGU 2017</em>.
+doi:<a class="reference external" href="https://doi.org/10.6084/m9.figshare.5662411">10.6084/m9.figshare.5662411</a></li>
+</ul>
+<div class="figure align-center">
+<a class="reference external image-reference" href="https://doi.org/10.6084/m9.figshare.5662411"><img alt="AGU poster on figshare" src="_images/agu2017-poster.jpg" /></a>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install.html" class="btn btn-neutral float-right" title="Installing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Disclaimer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
